@@ -21,7 +21,7 @@ flowchart TB
         end
         subgraph WS [Workstation · 35]
             ZARZ[Management<br/>WS-ZARZ-01…03]
-            KSIE[Accountant<br/>WS-KSIE-01…03]
+            KSIE[Accounting<br/>WS-KSIE-01…03]
             SPRZ[Sale<br/>WS-SPRZ-01…14]
             HELP[Helpdesk<br/>WS-HELP-01…05]
             NETA[Network-Administrator<br/>WS-NETA-01…05]
