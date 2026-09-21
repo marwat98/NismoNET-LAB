@@ -8,6 +8,7 @@ The environment simulates the work of 35 employees divided into 6 operational de
 
 # 🏗️ Architecture and Networking
 
+```mermaid
 flowchart TB
     NET([Internet])
     GW[NAT<br/>192.168.50.1]
@@ -31,3 +32,4 @@ flowchart TB
     GW --- LAN
     DC01 -. DHCP + DNS .-> WS
     TICKET -. LDAP .-> DC01
+```
