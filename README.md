@@ -40,4 +40,5 @@ Below is a chronological record of the environment's setup. Each step links to a
   * Installation and configuration of Windows Server 2022 (DC01).
   * Deployment of AD DS, DNS, and DHCP roles.
   * Creation of a logical OU (Organizational Units) structure that reflects the company’s departments.
+  * Assigning permissions to individual departments
  
