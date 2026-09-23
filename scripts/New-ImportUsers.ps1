@@ -14,28 +14,31 @@ Import-Csv .\uzytkownicy.csv -Encoding UTF8 | ForEach-Object {
         return
     }
 
-    # haslo generowane raz, uzywane w dwoch miejscach
     $tempPass   = New-TempPassword
     $securePass = ConvertTo-SecureString $tempPass -AsPlainText -Force
 
-    New-ADUser `
-        -Name              "$($_.Imie) $($_.Nazwisko)" `
-        -GivenName         $_.Imie  -Surname $_.Nazwisko `
-        -SamAccountName    $_.Login `
-        -UserPrincipalName "$($_.Login)@nismonet.local" `
-        -EmailAddress      "$($_.Login)@nismonet.local" `
-        -Department        $_.Dzial -Title $_.Stanowisko `
-        -Path              "OU=$($_.Dzial),$base" `
-        -AccountPassword   $securePass `
-        -ChangePasswordAtLogon $true -Enabled $true
+ try {
+        New-ADUser `
+            -Name              "$($user.Imie) $($user.Nazwisko)" `
+            -GivenName         $user.Imie  -Surname $user.Nazwisko `
+            -SamAccountName    $user.Login `
+            -UserPrincipalName "$($user.Login)@nismonet.local" `
+            -EmailAddress      "$($user.Login)@nismonet.local" `
+            -Department        $user.Dzial `
+            -Path              "OU=$($user.Dzial),$base" `
+            -AccountPassword   $securePass `
+            -ChangePasswordAtLogon $true -Enabled $true
 
-    Add-ADGroupMember -Identity "GG_$($_.Dzial)" -Members $_.Login
+        Add-ADGroupMember -Identity "GG_$($user.Dzial)" -Members $user.Login
+        # Save the login and temporary password to a CSV file
+        [PSCustomObject]@{
+            Login = $user.Login
+            Haslo = $tempPass
+        } | Export-Csv .\starting-passwords.csv -Append -NoTypeInformation -Encoding UTF8
 
-    # Save the login and temporary password to a CSV file
-    [PSCustomObject]@{
-        Login = $_.Login
-        Haslo = $tempPass
-    } | Export-Csv .\starting-passwords.csv -Append -NoTypeInformation -Encoding UTF8
-
-    Write-Host "Utworzono: $($_.Login)" -ForegroundColor Green
+        Write-Host "Utworzono: $($user.Login)" -ForegroundColor Green
+    }
+    catch {
+        Write-Warning "Blad przy $($user.Login): $($_.Exception.Message)"
+    }
 }
