@@ -33,3 +33,11 @@ flowchart TB
     DC01 -. DHCP + DNS .-> WS
     TICKET -. LDAP .-> DC01
 ```
+## 📅 Implementation Roadmap
+Below is a chronological record of the environment's setup. Each step links to a separate document containing screenshots, the scripts used, and a description of the configuration.
+
+* **[Phase 1: Domain Controller Installation and Configuration](./docs/phase1-ad.md)**
+  * Installation and configuration of Windows Server 2022 (DC01).
+  * Deployment of AD DS, DNS, and DHCP roles.
+  * Creation of a logical OU (Organizational Units) structure that reflects the company’s departments.
+ 
