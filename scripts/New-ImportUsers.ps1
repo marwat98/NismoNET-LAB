@@ -28,7 +28,8 @@ function Write-Log {
     Write-Host $line -ForegroundColor $color
 }
 
-Import-Csv .\uzytkownicy.csv -Encoding UTF8 | ForEach-Object {
+$csvPath = "$env:USERPROFILE\Desktop\uzytkownicy.csv"
+Import-Csv  $csvPath -Encoding UTF8 | ForEach-Object {
 
     if (Get-ADUser -Filter "SamAccountName -eq '$($_.Login)'") {
         Write-Log "Konto $($user.Login) juz istnieje - pomijam" -Level WARN
