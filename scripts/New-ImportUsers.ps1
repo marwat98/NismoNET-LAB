@@ -7,10 +7,31 @@ function New-TempPassword {
     return "$pass#26"
 }
 
+$logFile = ".\log-import-$(Get-Date -Format 'yyyy-MM-dd_HHmm').txt"
+
+function Write-Log {
+    param(
+        [string]$Message,
+        [ValidateSet("INFO","OK","WARN","ERROR")]
+        [string]$Level = "INFO"
+    )
+
+    $line = "{0} [{1}] {2}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss"), $Level, $Message
+    Add-Content -Path $logFile -Value $line -Encoding UTF8
+
+    $color = switch ($Level) {
+        "OK"    { "Green"  }
+        "WARN"  { "Yellow" }
+        "ERROR" { "Red"    }
+        default { "Gray"   }
+    }
+    Write-Host $line -ForegroundColor $color
+}
+
 Import-Csv .\uzytkownicy.csv -Encoding UTF8 | ForEach-Object {
 
     if (Get-ADUser -Filter "SamAccountName -eq '$($_.Login)'") {
-        Write-Warning "Konto $($_.Login) juz istnieje - pomijam"
+        Write-Log "Konto $($user.Login) juz istnieje - pomijam" -Level WARN
         return
     }
 
@@ -36,9 +57,15 @@ Import-Csv .\uzytkownicy.csv -Encoding UTF8 | ForEach-Object {
             Haslo = $tempPass
         } | Export-Csv .\starting-passwords.csv -Append -NoTypeInformation -Encoding UTF8
 
-        Write-Host "Utworzono: $($user.Login)" -ForegroundColor Green
+        Write-Log "Utworzono $($user.Login) w OU=$($user.Dzial)" -Level OK
     }
     catch {
-        Write-Warning "Blad przy $($user.Login): $($_.Exception.Message)"
+        Write-Log "Blad przy $($user.Login): $($_.Exception.Message)" -Level ERROR
     }
 }
+$utworzone = (Select-String -Path $logFile -Pattern "\[OK\]").Count
+$bledy     = (Select-String -Path $logFile -Pattern "\[ERROR\]").Count
+$pominiete = (Select-String -Path $logFile -Pattern "\[WARN\]").Count
+
+Write-Log "Podsumowanie: utworzono $utworzone, pominieto $pominiete, bledow $bledy" -Level INFO
+Write-Host "`nLog zapisany: $logFile" -ForegroundColor Cyan
