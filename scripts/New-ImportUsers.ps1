@@ -28,9 +28,9 @@ function Write-Log {
     Write-Host $line -ForegroundColor $color
 }
 
-$csvPath = "$env:USERPROFILE\Desktop\uzytkownicy.csv"
+$csvPath = Join-Path $PSScriptRoot "uzytkownicy.csv"
 Import-Csv  $csvPath -Encoding UTF8 | ForEach-Object {
-
+    $user = $_
     if (Get-ADUser -Filter "SamAccountName -eq '$($_.Login)'") {
         Write-Log "Konto $($user.Login) juz istnieje - pomijam" -Level WARN
         return
