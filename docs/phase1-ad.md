@@ -38,7 +38,7 @@ Install-ADDSForest -DomainName "nismonet.local" `
 
 **Verification**
 
-![Domain and forest after promotion](images/phase1-domain-promoted.png)
+[Domain and forest after promotion](images/phase1-domain-promoted.png)
 
 Get-ADDomain returns nismonet.local with the NetBIOS name NISMONET and DC01 as
 the PDC emulator, which confirms that the forest was created and that this
