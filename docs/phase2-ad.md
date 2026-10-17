@@ -23,7 +23,7 @@ Add-DhcpServerv4Scope -Name "NismoNET-LAN" `
 
 **Verification**
 
-![DHCP lease for WS-SPRZ-01](imges/Get-DhcpServer4Lease.png)
+![DHCP lease for WS-SPRZ-01](./imges/phase2-dhcp-lease.png)
 
 WS-SPRZ-01 holds an active lease from the configured pool, registered with
 the domain suffix applied.
