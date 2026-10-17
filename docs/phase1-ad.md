@@ -59,7 +59,7 @@ through VirtualBox NAT, and because it carries a default gateway it had the
 higher priority, so the controller was asking external DNS servers about its
 own domain. Pointing that adapter to the domain DNS server and stopping it
 from registering its address resolved it.
-See [Domain controller with two adapters polluting DNS](09-troubleshooting.md#domain-controller-with-two-adapters-polluting-dns).
+See [Domain controller with two adapters polluting DNS](images/phase1-troubleshooting-dcdiag-passed.png).
 
 **Takeaway.** A domain controller resolves its own domain through itself. That
 one setting decides whether anything else in the environment will work, and
