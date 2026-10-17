@@ -44,11 +44,22 @@ Get-ADDomain returns nismonet.local with the NetBIOS name NISMONET and DC01 as
 the PDC emulator, which confirms that the forest was created and that this
 server holds the directory roles.
 
-**What went wrong.** The first attempt to configure the adapter failed because
-I set 127.0.0.1 as the default gateway. A gateway must be an address that
-exists on the same subnet and can actually forward traffic — the loopback
-address belongs to the machine itself and routes nothing. The correct split is
-192.168.50.1 as the gateway and 127.0.0.1 as the DNS server.
+**What went wrong.**
+
+The first attempt to configure the adapter failed because I set 127.0.0.1 as
+the default gateway. A gateway must be an address that exists on the same
+subnet and can actually forward traffic — the loopback address belongs to the
+machine itself and routes nothing. The correct split is 192.168.50.1 as the
+gateway and 127.0.0.1 as the DNS server.
+
+The second problem appeared later, during verification. `dcdiag` reported
+*DC01 failed test Connectivity* and the server could not resolve its own
+`_msdcs` record. The cause was the second adapter: it provides internet access
+through VirtualBox NAT, and because it carries a default gateway it had the
+higher priority, so the controller was asking external DNS servers about its
+own domain. Pointing that adapter to the domain DNS server and stopping it
+from registering its address resolved it.
+See [Domain controller with two adapters polluting DNS](09-troubleshooting.md#domain-controller-with-two-adapters-polluting-dns).
 
 **Takeaway.** A domain controller resolves its own domain through itself. That
 one setting decides whether anything else in the environment will work, and
