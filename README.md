@@ -41,4 +41,9 @@ Below is a chronological record of the environment's setup. Each step links to a
   * Deployment of AD DS, DNS, and DHCP roles.
   * Creation of a logical OU (Organizational Units) structure that reflects the company’s departments.
   * Assigning permissions to individual departments
- 
+    
+* **[Phase 2: Network Addressing and DHCP](./docs/phase2-ad.md)**
+  * Deployment of the DHCP role on DC01.
+  * Creation of the 192.168.50.100–200 scope, with the lower range reserved for devices that need a fixed address.
+  * Configuration of options 003, 006 and 015 — gateway, domain DNS server and domain suffix.
+  * Authorization of the DHCP server in Active Directory and verification of a client lease.
