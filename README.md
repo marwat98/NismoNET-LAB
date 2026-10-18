@@ -53,8 +53,8 @@ Below is a chronological record of the environment's setup. Each step links to a
 The lab is built and running. This roadmap tracks how much of it is written up —
 phases without a link are configured but not yet documented.
 
-- [x] [Phase 1: Domain Controller, DNS and Addressing](docs/phase1.md)
-- [x] [Phase 2: Network Addressing and DHCP](docs/phase2.md)
+- [x] [Phase 1: Domain Controller, DNS and Addressing](./docs/phase1-ad.md)
+- [x] [Phase 2: Network Addressing and DHCP](./docs/phase2-ad.md)
 - [ ] Phase 3: Directory Structure and Delegation
 - [ ] Phase 4: User Account Provisioning
 - [ ] Phase 5: Workstation and Group Policy
