@@ -47,3 +47,16 @@ Below is a chronological record of the environment's setup. Each step links to a
   * Creation of the 192.168.50.100–200 scope, with the lower range reserved for devices that need a fixed address.
   * Configuration of options 003, 006 and 015 — gateway, domain DNS server and domain suffix.
   * Authorization of the DHCP server in Active Directory and verification of a client lease.
+
+## Implementation Roadmap
+
+The lab is built and running. This roadmap tracks how much of it is written up —
+phases without a link are configured but not yet documented.
+
+- [x] [Phase 1: Domain Controller, DNS and Addressing](docs/phase1.md)
+- [x] [Phase 2: Network Addressing and DHCP](docs/phase2.md)
+- [ ] [Phase 3: Directory Structure and Delegation](docs/phase3.md)
+- [ ] Phase 4: User Account Provisioning
+- [ ] Phase 5: Workstation and Group Policy
+- [ ] Phase 6: File Server and Access Control
+- [ ] Troubleshooting log
