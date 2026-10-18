@@ -38,11 +38,22 @@ Install-ADDSForest -DomainName "nismonet.local" `
 
 **Verification**
 
-[Domain and forest after promotion](images/phase1-domain-promoted.png)
+**Verification**
 
-Get-ADDomain returns nismonet.local with the NetBIOS name NISMONET and DC01 as
-the PDC emulator, which confirms that the forest was created and that this
-server holds the directory roles.
+[Static addressing and DNS client settings](images/phase1-network-config.png)
+
+Both adapters are listed. The lab adapter holds 192.168.50.10 with a manual
+origin and points to itself for DNS — the setting the whole domain depends on.
+
+[Domain and forest](images/phase1-domain-promoted.png)
+
+The forest nismonet.local exists, DC01 holds the PDC emulator role, and the
+NetBIOS name NISMONET was generated from the domain name during promotion.
+
+[dcdiag tests passed](images/phase1-dcdiag-passed.png)
+
+The connectivity and services tests pass — the same test that failed during
+the DNS problem described below.
 
 **What went wrong.**
 
