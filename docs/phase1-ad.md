@@ -40,17 +40,17 @@ Install-ADDSForest -DomainName "nismonet.local" `
 
 **Verification**
 
-[Static addressing and DNS client settings](images/phase1-network-config.png)
+![Static addressing and DNS client settings](images/phase1-network-config.png)
 
 Both adapters are listed. The lab adapter holds 192.168.50.10 with a manual
 origin and points to itself for DNS — the setting the whole domain depends on.
 
-[Domain and forest](images/phase1-domain-promoted.png)
+![Domain and forest](images/phase1-domain-promoted.png)
 
 The forest nismonet.local exists, DC01 holds the PDC emulator role, and the
 NetBIOS name NISMONET was generated from the domain name during promotion.
 
-[dcdiag tests passed](images/phase1-dcdiag-passed.png)
+![dcdiag tests passed](images/phase1-dcdiag-passed.png)
 
 The connectivity and services tests pass — the same test that failed during
 the DNS problem described below.
@@ -70,7 +70,7 @@ through VirtualBox NAT, and because it carries a default gateway it had the
 higher priority, so the controller was asking external DNS servers about its
 own domain. Pointing that adapter to the domain DNS server and stopping it
 from registering its address resolved it.
-See [Domain controller with two adapters polluting DNS](images/phase1-troubleshooting-dcdiag-passed.png).
+See ![Domain controller with two adapters polluting DNS](images/phase1-troubleshooting-dcdiag-passed.png).
 
 **Takeaway.** A domain controller resolves its own domain through itself. That
 one setting decides whether anything else in the environment will work, and
