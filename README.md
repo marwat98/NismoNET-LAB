@@ -48,6 +48,16 @@ Below is a chronological record of the environment's setup. Each step links to a
   * Configuration of options 003, 006 and 015 — gateway, domain DNS server and domain suffix.
   * Authorization of the DHCP server in Active Directory and verification of a client lease.
 
+* **[Phase 3: Directory Structure and Delegation](docs/phase3.md)**
+   * Creation of an OU tree mirroring the company's departments, with separate
+     containers for workstations and service accounts.
+   * Security groups with a consistent `GG_` prefix, one per department and one
+     per role.
+   * Delegation of password reset and account enable/disable to the helpdesk
+     group, scoped to the user OU rather than the domain.
+   * Verification from a non-administrative account, including a negative test
+     confirming the delegation is narrow.
+
 ## Implementation Roadmap
 
 The lab is built and running. This roadmap tracks how much of it is written up —
