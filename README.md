@@ -57,6 +57,13 @@ Below is a chronological record of the environment's setup. Each step links to a
      group, scoped to the user OU rather than the domain.
    * Verification from a non-administrative account, including a negative test
      confirming the delegation is narrow.
+     
+* **[Phase 4: User Account Provisioning](./docs/phase4-ad.md)**
+  * Bulk creation of 35 accounts from a CSV file using a PowerShell script.
+  * Input validation before any account is created: required fields, login format and length,
+    duplicates, and existence of the target OU and group.
+  * Automatic placement in the department OU and membership in the matching group.
+  * A log of every run and a separate CSV report listing rejected rows with the reason.
 
 ## Implementation Roadmap
 
