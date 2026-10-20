@@ -65,10 +65,9 @@ Below is a chronological record of the environment's setup. Each step links to a
   * Automatic placement in the department OU and membership in the matching group.
   * A log of every run and a separate CSV report listing rejected rows with the reason.
 
-## Implementation Roadmap
+## In progress
 
-The lab is built and running. This roadmap tracks how much of it is written up —
-phases without a link are configured but not yet documented.
+Below i providing what is curentally finish and what have to be describe.
 
 - [x] [Phase 1: Domain Controller, DNS and Addressing](./docs/phase1-ad.md)
 - [x] [Phase 2: Network Addressing and DHCP](./docs/phase2-ad.md)
