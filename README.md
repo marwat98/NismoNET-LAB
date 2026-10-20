@@ -65,7 +65,7 @@ Below is a chronological record of the environment's setup. Each step links to a
   * Automatic placement in the department OU and membership in the matching group.
   * A log of every run and a separate CSV report listing rejected rows with the reason.
 
-## In progress
+## 🚧 In progress
 
 Below i providing what is curentally finish and what have to be describe.
 
