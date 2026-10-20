@@ -33,11 +33,6 @@ Script: [`New-ImportUsers.ps1`](../scripts/New-ImportUsers.ps1)
 The run reports each account as it is created and ends with a summary of
 successes, warnings and errors.
 
-![Created accounts](images/phase4-created-accounts.png)
-
-All 35 accounts from the input file exist in the directory, each one in the OU
-of its department.
-
 ![Accounts by department](images/phase4-accounts-by-department.png)
 
 Grouping the accounts by their department attribute confirms that every one
