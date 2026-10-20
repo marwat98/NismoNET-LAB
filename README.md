@@ -65,7 +65,7 @@ phases without a link are configured but not yet documented.
 
 - [x] [Phase 1: Domain Controller, DNS and Addressing](./docs/phase1-ad.md)
 - [x] [Phase 2: Network Addressing and DHCP](./docs/phase2-ad.md)
-- [ ] Phase 3: Directory Structure and Delegation
+- [x] Phase 3: Directory Structure and Delegation
 - [ ] Phase 4: User Account Provisioning
 - [ ] Phase 5: Workstation and Group Policy
 - [ ] Phase 6: File Server and Access Control
