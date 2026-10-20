@@ -48,7 +48,7 @@ Below is a chronological record of the environment's setup. Each step links to a
   * Configuration of options 003, 006 and 015 — gateway, domain DNS server and domain suffix.
   * Authorization of the DHCP server in Active Directory and verification of a client lease.
 
-* **[Phase 3: Directory Structure and Delegation](docs/phase3.md)**
+* **[Phase 3: Directory Structure and Delegation](./docs/phase3-ad.md)**
    * Creation of an OU tree mirroring the company's departments, with separate
      containers for workstations and service accounts.
    * Security groups with a consistent `GG_` prefix, one per department and one
