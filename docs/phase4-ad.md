@@ -27,8 +27,7 @@ company, and is almost never filled in perfectly.
 Script: [`New-ImportUsers.ps1`](../scripts/New-ImportUsers.ps1)
 
 **Verification**
-
-![Script run](logs/log-import-run)
+Script run: [`log-import-run.txt`](logs/log-import-run.txt)
 
 The run reports each account as it is created and ends with a summary of
 successes, warnings and errors.
