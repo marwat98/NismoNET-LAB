@@ -1,0 +1,2 @@
+﻿2026-10-21 14:45:37 [INFO] Start importu z pliku C:\Users\Administrator\Desktop\pass\uzytkownicy.csv
+2026-10-21 14:45:38 [ERROR] Nie znaleziono pliku C:\Users\Administrator\Desktop\pass\uzytkownicy.csv - przerywam

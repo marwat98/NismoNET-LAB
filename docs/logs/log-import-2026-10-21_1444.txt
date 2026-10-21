@@ -1,0 +1,7 @@
+﻿2026-10-21 14:44:00 [INFO] Start importu z pliku C:\Users\Administrator\Desktop\pass\uzytkownicy.csv
+2026-10-21 14:44:03 [INFO] Usunieto poprzedni plik C:\Users\Administrator\Desktop\pass\starting-passwords.csv
+2026-10-21 14:44:03 [INFO] Wczytano wierszy: 3
+2026-10-21 14:44:04 [OK] Utworzono e.rakowska w OU=Sprzedaz
+2026-10-21 14:44:04 [WARN] b.lewandowski (wiersz 3): nie znaleziono jednostki OU=Sklep,OU=Uzytkownicy,OU=NismoNET,DC=nismonet,DC=local
+2026-10-21 14:44:04 [OK] Utworzono t.malinowski w OU=Ksiegowosc
+2026-10-21 14:44:04 [INFO] Podsumowanie: utworzono 2, pominieto 1, bledow 0
