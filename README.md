@@ -72,7 +72,7 @@ Below i providing what is curentally finish and what have to be describe.
 - [x] [Phase 1: Domain Controller, DNS and Addressing](./docs/phase1-ad.md)
 - [x] [Phase 2: Network Addressing and DHCP](./docs/phase2-ad.md)
 - [x] [Phase 3: Directory Structure and Delegation](./docs/phase3-ad.md)
-- [ ] Phase 4: User Account Provisioning
+- [x] [Phase 4: User Account Provisioning](./docs/phase4-ad.md)
 - [ ] Phase 5: Workstation and Group Policy
 - [ ] Phase 6: File Server and Access Control
 - [ ] Troubleshooting log
