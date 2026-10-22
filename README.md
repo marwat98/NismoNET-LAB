@@ -15,9 +15,8 @@ flowchart TB
     NET --- GW
 
     subgraph LAN [LAN Network 192.168.50.0/24]
-        subgraph SRV [Serwery]
+        subgraph SRV [Serwer]
             DC01[DC01<br/>192.168.50.10<br/>AD DS · DNS · DHCP]
-            TICKET[SRV-TICKET<br/>192.168.50.20<br/>GLPI]
         end
         subgraph WS [Workstation · 35]
             ZARZ[Management<br/>WS-ZARZ-01…03]
@@ -31,7 +30,6 @@ flowchart TB
 
     GW --- LAN
     DC01 -. DHCP + DNS .-> WS
-    TICKET -. LDAP .-> DC01
 ```
 ## 📅 Implementation Roadmap
 Below is a chronological record of the environment's setup. Each step links to a separate document containing screenshots, the scripts used, and a description of the configuration.
