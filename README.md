@@ -64,6 +64,12 @@ Below is a chronological record of the environment's setup. Each step links to a
     duplicates, and existence of the target OU and group.
   * Automatic placement in the department OU and membership in the matching group.
   * A log of every run and a separate CSV report listing rejected rows with the reason.
+ 
+* **[Phase 5: Workstation and Group Policy](./docs/phase5-ad.md)**
+  * Installation of a Windows 11 workstation and its join to the domain, with the computer object placed in the workstation OU.
+  * Password policy enforced at domain level through the Default Domain Policy.
+  * Drive mapping through Group Policy Preferences with item-level targeting by group membership, so one policy serves every department.
+  * Verification from a user account on the station, confirming that a Sales user receives their own drives and not another department’s.
 
 ## 🚧 In progress
 
@@ -73,6 +79,6 @@ Below i providing what is curentally finish and what have to be describe.
 - [x] [Phase 2: Network Addressing and DHCP](./docs/phase2-ad.md)
 - [x] [Phase 3: Directory Structure and Delegation](./docs/phase3-ad.md)
 - [x] [Phase 4: User Account Provisioning](./docs/phase4-ad.md)
-- [ ] Phase 5: Workstation and Group Policy
+- [x] [Phase 5: Workstation and Group Policy](./docs/phase5-ad.md)
 - [ ] Phase 6: File Server and Access Control
 - [ ] Troubleshooting log
