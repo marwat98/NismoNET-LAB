@@ -70,15 +70,9 @@ Below is a chronological record of the environment's setup. Each step links to a
   * Password policy enforced at domain level through the Default Domain Policy.
   * Drive mapping through Group Policy Preferences with item-level targeting by group membership, so one policy serves every department.
   * Verification from a user account on the station, confirming that a Sales user receives their own drives and not another department’s.
-
-## 🚧 In progress
-
-Below i providing what is curentally finish and what have to be describe.
-
-- [x] [Phase 1: Domain Controller, DNS and Addressing](./docs/phase1-ad.md)
-- [x] [Phase 2: Network Addressing and DHCP](./docs/phase2-ad.md)
-- [x] [Phase 3: Directory Structure and Delegation](./docs/phase3-ad.md)
-- [x] [Phase 4: User Account Provisioning](./docs/phase4-ad.md)
-- [x] [Phase 5: Workstation and Group Policy](./docs/phase5-ad.md)
-- [ ] Phase 6: File Server and Access Control
-- [ ] Troubleshooting log
+ 
+* **[Phase 6: File Server and Access Control](./docs/phase6-ad.md)**
+  * Three volumes labelled by purpose, holding the departmental and shared data areas.
+  * Shares created with the real permissions set at NTFS level and inheritance broken on each department folder.
+  * A permission matrix mapping every group to its level of access.
+  * Negative verification: an account from one department is denied access to another department’s data.
