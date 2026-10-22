@@ -32,7 +32,7 @@ in and get what they were supposed to get.
 The station is a member of the domain and its object sits in the workstation
 OU, which is where policies for machines are linked.
 
-![Applied policies](images/phase5-gpresult.png)
+Script run: [`log-veryfication-sales-account.txt`](logs/log-veryfication-sales-account.txt)
 
 gpresult run as the logged-on user lists the policies that applied and the
 groups the account belongs to — the two things that together decide what the
