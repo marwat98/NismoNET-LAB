@@ -75,7 +75,7 @@ Below is a chronological record of the environment's setup. Each step links to a
   * A permission matrix mapping every group to its level of access.
   * Negative verification: an account from one department is denied access to another department’s data.
 
-## Problems encountered
+## 🔧 Problems encountered
 
 Five failures worth recording, each described in the phase where it happened:
 
