@@ -84,3 +84,4 @@ Five failures worth recording, each described in the phase where it happened:
 - [Delegated rights that never reached the OU](./docs/phase3-ad.md#what-went-wrong)
 - [A script that carried on after an error instead of stopping](./docs/phase4-ad.md#what-went-wrong)
 - [A drive mapping that applied to the wrong department](./docs/phase5-ad.md#what-went-wrong)
+- [The group policy was mapping drives to paths that did not exist](./docs/phase6-ad.md#what-went-wrong)
