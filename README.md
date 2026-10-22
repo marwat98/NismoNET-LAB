@@ -74,3 +74,13 @@ Below is a chronological record of the environment's setup. Each step links to a
   * Shares created with the real permissions set at NTFS level and inheritance broken on each department folder.
   * A permission matrix mapping every group to its level of access.
   * Negative verification: an account from one department is denied access to another department’s data.
+
+## Problems encountered
+
+Five failures worth recording, each described in the phase where it happened:
+
+- [A domain controller resolving its own domain through an external DNS server](./docs/phase1-ad.md#what-went-wrong)
+- [A DHCP server that silently stopped serving addresses](./docs/phase2-ad.md#what-went-wrong)
+- [Delegated rights that never reached the OU](./docs/phase3-ad.md#what-went-wrong)
+- [A script that carried on after an error instead of stopping](./docs/phase4-ad.md#what-went-wrong)
+- [A drive mapping that applied to the wrong department](./docs/phase5-ad.md#what-went-wrong)
