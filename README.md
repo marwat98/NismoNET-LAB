@@ -77,7 +77,7 @@ Below is a chronological record of the environment's setup. Each step links to a
 
 ## 🔧 Problems encountered
 
-Five failures worth recording, each described in the phase where it happened:
+Six failures worth recording, each described in the phase where it happened:
 
 - [A domain controller resolving its own domain through an external DNS server](./docs/phase1-ad.md#what-went-wrong)
 - [A DHCP server that silently stopped serving addresses](./docs/phase2-ad.md#what-went-wrong)
