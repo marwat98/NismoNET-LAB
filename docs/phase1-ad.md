@@ -38,8 +38,6 @@ Install-ADDSForest -DomainName "nismonet.local" `
 
 **Verification**
 
-**Verification**
-
 ![Static addressing and DNS client settings](images/phase1-network-config.png)
 
 Both adapters are listed. The lab adapter holds 192.168.50.10 with a manual
