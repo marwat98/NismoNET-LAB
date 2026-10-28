@@ -38,7 +38,7 @@ successes, warnings and errors.
 Grouping the accounts by their department attribute confirms that every one
 landed in the right place and that the counts match the input file.
 
-Error report: [`log-not-found-import-file.txt`](logs/log-import-run.txt)
+Error report: [`log-not-found-import-file.txt`](logs/log-not-found-import-file.txt)
 
 A row with missing data is not created and not silently skipped — it appears
 in the report with the reason, so the input file can be corrected.
